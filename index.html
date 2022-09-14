@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Sea Breeze Nea Peramos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/logo.jpg" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Начало</a> </li>
+          <li> <a href="#about" class="nav-link">За нас</a> </li>
+          <li> <a href="#rooms" class="nav-link">Стаи</a> </li>
+          <li> <a href="#restaurant" class="nav-link">Ресторанти</a> </li>
+          <li> <a href="#gallery" class="nav-link"></a>Галерия</li>
+          <li> <a href="#contact" class="nav-link">Контакти</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1> Sea Breeze </h1>
+          <p>Къщата се намира само на 100 метра от популярния плаж 'The Blue beach', както и до множество заведения, но в същото време районът е много тих. Къщата разполага с мезонет с големи тераси, както и едноспален апартамент с дворче барбекю.  </p>
+          <button>Повече информация</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home1.jpeg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/home1.jpeg" alt="" class="slide active" onclick="img('image/home1.jpeg')">
+        <img src="image/home2.jpeg" alt="" class="slide" onclick="img('image/home2.jpeg')">
+        <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
+        <img src="image/home4.jpeg" alt="" class="slide" onclick="img('image/home4.jpeg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Настаняване:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Напускане:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Възрастни</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Деца:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <input type="submit" value="ТЪРСЕНЕ">
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+          <img src="image/a2.jpeg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>Супер вила за супер почивка</h5>
+          <h2>Добре дошли в Sea Breeze </h2>
+          <p>Къщата се намира само на 100 метра от най-хубавия плаж в града "The Blue Beach". Наоколо има множество ресторанти и барове, а около къщата е тихо и лесно за паркиране.</p>
+          <p>Ние предлагаме мезонет с две спални, кухня, дневна и три големи тераси. Мезонетът е с капацитет 5 човека. Предлагаме и едноспален апартамент с една спалня, разтегателен диван, кухня и дворче с барбекю. Капацитетъ е 4 човека. Предлагаме и възможност за наемане на цялата къща.</p>
+          <button class="btn1">Повече информация</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Удобствата на къщата</h2>
+        <p>Къщата разполага с много удобства като бърз интернет, за да можете да свършите всичко. Предлагаме и кану, за да комбинирате забавление и спорт. Имаме и екипировка за гмуркане, за да се насладите на красивите скали под водата, както и много други екстри.</p>
+
+        <div class="content">
+           <div class="box flex">
+             <i class="fas fa-swimming-pool"></i>
+             <span>Надуваем басейн</span>
+           </div>
+           <div class="box flex">
+             <i class="fas fa-dumbbell"></i>
+             <span>Йога на покрива</span>
+           </div>
+           <div class="box flex">
+             <i class="fas fa-spa"></i>
+             <span>Масажи</span>
+           </div>
+           <div class="box flex">
+             <i class="fas fa-ship"></i>
+             <span>Разходка с лодка</span>
+           </div>
+           <div class="box flex">
+             <i class="fas fa-swimmer"></i>
+             <span>Кану под наем</span>
+           </div>
+           <div class="box flex">
+             <i class="fas fa-microphone"></i>
+             <span>Бърз интернет</span>
+           </div>
+           <div class="box flex">
+             <i class="fas fa-water"></i>
+             <span>Гмуркане</span>
+           </div>
+           <div class="box flex">
+             <i class="fas fa-umbrella-beach"></i>
+             <span>Удобен плаж</span>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>Супер къща за супер почивка</h5>
+          <h2>Какво предлагаме</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">Виж всичко</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Мезонет</h3>
+            <p> <span>€</span>120 <span>/за нощувка</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Едноспален апартамент</h3>
+            <p> <span>€</span>80 <span>/за нощувка</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Цяла къща</h3>
+            <p> <span>€</span>200 <span>/за нощувка</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>Най-важното за нас са доволните клиенти</h5>
+          <h2>Хората казват</h2>
+        </div>
+
+        <div class="para">
+          <p>Къщата е много хубава и чиста. Винаги имаше къде да паркираме и домакините бяха много любезни. Няма по-добро място в Неа Перамос. Силно го препоръчвам и няма да съжалявате! </p>
+
+          <div class="box flex">
+            <div class="img">
+              <img src="image/c.jpg" alt="">
+            </div>
+            <div class="name">
+              <h5>Тодор Светозаров</h5>
+              <h5>Дерменджиев</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Ресторантите наоколо</h2>
+          <p>Около къщата има множество хубави ресторанти, от които можете да избирате. Тук сме изброили някои от нашите любими. </p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Nezas fish</h2>
+            <div class="accordionItemContent">
+              <p>Този ресторант приготвя най-добрата риба в Неа Перамос. Има голям асортимент от прясна риба, като се предлагат големи порции на достъпни цени. Локацията не е на крайбрежието, но си заслужава да се опита.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">MIRA-MARE</h2>
+            <div class="accordionItemContent">
+              <p> Тази типична гръцка таверна се намира в центъра на крайбрежната алея. Масите са на брега на морето и наоколо е оживено. Цените са една идея по-високи, но ресторантът е много приятен.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Taverna Germanos</h2>
+            <div class="accordionItemContent">
+              <p>Ако искате да сте в тиха таверна на брега на морето, то това е Вашето място! Намира се на 5 минути пеша от къщата, не е в центъра и няма много хора, а цените са достъпни. Ако обичате тишината и спокойствието, то межете да постите тази таверна.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Batis Stekhouse</h2>
+            <div class="accordionItemContent">
+              <p>Ако искате да разнообразите от ресторантите и търсите нещо, което става бързо и е вкусно и евтино, или пък просто харесвате типичните за Гърция гироси, то това е вашето място. Тук се приготвят най-вкусните гироси в Неа Перамос.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>Добре дошли в нашата галерия!</h5>
+          <h2>Тук можете да разгледате нашата къща</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">Виж снимките</button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="image/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188.6694009389503!2d24.30277399253101!3d40.834323993607036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf4ff47edebf0d629!2zNDDCsDUwJzAzLjYiTiAyNMKwMTgnMTAuNSJF!5e0!3m2!1sen!2sbg!4v1663072368833!5m2!1sen!2sbg" width="600" height="450" style="border:0;"
+     allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p>Sea Breeze - супер къща за супер почивка. Тук важният си ти! Заповядайте! </p>
+
+        <p>Възможни начини на плащане</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Последни новини</h3>
+
+        <ul>
+          <li>Разходка с кану - специално за теб</li>
+          <li>Шнорхелинг около скали и сред пасажи от рибки</li>
+          <li>15% намаления след 15 септември</li>
+          <li>Опция за дългосрочен наем извън сезона - перфектно за дигитални номади</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>За нашите клиенти</h3>
+        <ul>
+          <li>Повече за Sea Breeze и Неа Перамос</li>
+          <li>Винаги на линия за нашите гости</li>
+          <li>Полезни съвети</li>
+          <li>Информация за цените</li>
+          <li>Правила при наем на къщата</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Свържете се с нас</h3>
+
+        <ul>
+          <li>Greece, Nea Peramos, ul. Geor. Papandreou</li>
+          <li><i class="far fa-envelope"></i>tdermendjiev@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>0899 899 329 </li>
+          <li><i class="far fa-phone-alt"></i>0898 487 763 </li>
+          <li><i class="far fa-comments">FB: Sea Breeze Nea Peramos</i>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
